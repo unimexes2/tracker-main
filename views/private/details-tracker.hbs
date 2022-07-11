@@ -1,0 +1,46 @@
+<div>
+    <a href="/addtracker">Back to My Trackers</a>
+
+<div class="container">
+  <h2>Tracker Details</h2>
+  <h4>Alias: {{tracker.alias}}</h4>
+
+  {{#each tracker.trackerData}}  
+  <h3> Position   recieved   </h3>         
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><strong>Latitud:</strong></td>
+        <td>{{this.coordlat}}</td>
+      </tr>
+      <tr>
+        <td><strong>Longitud:</strong></td>
+        <td>{{this.coordlng}}</td>
+      </tr>
+      <tr>
+        <td><strong>Speed:</strong></td>
+        <td>{{this.speed}}</td>
+      </tr>
+      <tr>
+        <td><strong>Time:</strong></td>
+        <td>{{this.time}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {{/each}}
+</div>
+
+
+
+    {{!-- <div>
+        <h2>Tracker Details</h2>
+        <hr>
+        <p>Alias: {{alias}}</p>
+        {{#each trackerData}}
+        <p>Latitud: {{this.coordlat}}</p>
+        <p>Longitud: {{this.coordlng}}</p>
+        <p>Speed: {{this.speed}}</p>
+        <p>Time: {{this.time}}</p>
+        {{/each}}
+    </div>
+</div> --}}

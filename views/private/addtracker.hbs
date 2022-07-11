@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<div class="card">
+    <h2>Devices of: {{response.username}} </h2>
+    <p>From this page you can link your device to you account <br> <b>Hints</b> The connection string should be send to
+        the
+        server with POST metod</p>
+    <br>
+    <p>The string "http://localhost:3000/bd-save/<b>(DEVICE ID)</b>coordlat=<b>(LATITUD VALUE)</b>&coordlng=<b>(LONGITUD
+            VALUE)</b>&speed=<b></b>(SPEED VALUE)</b>",<br> there is connection string is a property of a:
+
+
+    <p><b>(DEVICE ID)</b> -is your ID in our system </p>
+    <p> <b>(LATITUD VALUE)</b> - should be a number up to 17 symbols(decimal) </p>
+    <p> <b> (LONGITUD VALUE)</b>- should be a number up to 17 symbols(decimal) </p>
+    <p> <b> (SPEED VALUE)</b> - should be a number up to 4 symbols(decimal) </p>
+
+
+    </p>
+</div>
+<div>
+    <h2>Add Tracker</h2>
+
+    <form action="/addtracker/create" method="POST">
+        <label for="alias">Alias:</label>
+        <input id="alias" name="alias" type="text"></input>
+        <div class="btn-class"></div>
+        <button type="submit">Create New Tracker</button>
+        <div class="btn-class"></div>
+    </form>
+
+</div>
+<br>
+<br>
+
+
+<div class="row">
+    {{#each response.trackers}}
+    <div class="column">
+
+
+        <div class="card">
+            <h3>Tracker name: {{this.alias}}</h3>
+            <h4>(DEVICE ID)</h4>
+            <p>{{this._id}}</p>
+
+
+            <form action="/addtracker-delete/{{this.id}}" method="POST">
+                <button id="btn-delete" type="submit">Delete</button>
+            </form>
+
+
+            <div>
+                <form action="/addtracker-edit/{{this.id}}" method="POST">
+                    <input type="text" id="text-edit" placeholder="New tracker name" name="alias" required>
+                    <button id="btn-edit" type="submit">Edit name</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    {{/each}}
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

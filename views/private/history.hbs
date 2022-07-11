@@ -1,0 +1,19 @@
+ <link rel="stylesheet" href="/stylesheets/style.css" />
+ {{#each response.trackers}}
+    <div class="column">
+
+
+        <div class="card">
+            <h3>Tracker name: {{this.alias}}</h3>
+            <h4>(DEVICE ID)</h4>
+            <p>{{this._id}}</p>
+         
+
+            <form id="btn-details" action="/addtracker-details/{{this.id}}" method="POST">
+                <button type="submit">Details</button>
+            </form>
+        </div>
+
+
+    </div>
+    {{/each}}
