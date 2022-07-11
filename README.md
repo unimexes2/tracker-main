@@ -2,3 +2,5 @@ Geolocation application for the location of connected devices that will be locat
 In order to use the geolocation correctly, the user must change to the file views/private/my-trackers, and place his google maps APIKEY on line 82.
 Also you need to establish connection with your  Mongo database in .env file.
 Also, in https://github.com/unimexes2/tracker-client/blob/main/tracker.apk you can find a Android client apk. The client aplication code is  https://github.com/unimexes2/tracker-client.git. You can change the server direction in MainActivity file.
+HOW TO USE
+After registration you will see "add Tracker" screen. Here you will be able to add your device. After you will see a connection string wich you should save in your device. 
